@@ -67,6 +67,14 @@ To use them in an existing timeline, select all caption titles, copy them, and p
 
 
 
+✏️ Editing Captions
+
+All generated captions are added as standard Final Cut Pro title clips.
+You can also edit the captions before exporting directly in the app.
+Nothing is locked or baked in.
+
+
+
 🎛 Frame Rate
 
 Choose the frame rate to match your Final Cut Pro timeline:
