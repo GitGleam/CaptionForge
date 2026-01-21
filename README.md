@@ -78,3 +78,7 @@ Choose the frame rate to match your Final Cut Pro timeline:
 	•	60
 
 This ensures frame-accurate caption timing.
+
+if you like the app ferl free to Buy Me A Coffee 
+
+
