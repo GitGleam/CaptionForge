@@ -79,7 +79,13 @@ Choose the frame rate to match your Final Cut Pro timeline:
 
 This ensures frame-accurate caption timing.
 
-If you like the app ferl free to Buy Me A Coffee 
+<div align="center">
+
+If you like the app, feel free to **Buy Me A Coffee** ☕️
+
+<br/>
 
 <img width="300" height="300" alt="qr-code" src="https://github.com/user-attachments/assets/5c602520-fbbe-4d36-b207-8f4f0d64ab50" />
+
+</div>
 
