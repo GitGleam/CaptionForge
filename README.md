@@ -1,4 +1,5 @@
 # CaptionForge
+![ScreenRecording2026-01-21at16 36 21-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/279e32b2-7254-4b87-9cb5-cd3402c0e867)
 
 **Free macOS app to convert subtitles or video speech into Final Cut Pro caption-style title clips.**
 
