@@ -21,10 +21,12 @@ For video caption generation, macOS will request Speech Recognition permission.
 	1.	Launch CaptionForge
 	2.	Choose a caption style from the Gallery
 	3.	Load your content:
-	•	SRT → import subtitles
-	•	Video → generate captions from speech
-	4.	Click Export
-	5.	Import the exported FCPXML into Final Cut Pro
+• SRT → import subtitles
+• Video → generate captions from speech
+	4.	(Optional) Adjust Max Words per Caption (controls how long each title is)
+	5.	Click Export
+	6.	Import the exported FCPXML into Final Cut Pro
+
 
 
 
