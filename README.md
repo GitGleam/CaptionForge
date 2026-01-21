@@ -1,4 +1,10 @@
-# CaptionForge
+
+
+
+https://github.com/user-attachments/assets/0edf3858-ea28-4375-8f33-02444bd88657
+
+
+CaptionForge
 
 Free macOS app to convert subtitles or video speech into Final Cut Pro caption-style title clips.
 
