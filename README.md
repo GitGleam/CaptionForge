@@ -3,29 +3,25 @@
 
 **Free macOS app to convert subtitles or video speech into Final Cut Pro caption-style title clips.**
 
-CaptionForge generates **FCPXML** files that import directly into **Final Cut Pro**, placing each caption as an **editable title** on the timeline.
+# CaptionForge
 
-No subscriptions.  
-No plugins.  
-No accounts.
+**Turn SRT files or spoken dialogue into frame-accurate Final Cut Pro caption titles.**
 
-I built this because I was tired of seeing only paid or subscription-based options for a very common caption workflow.
+CaptionForge is a macOS app that converts subtitle files or spoken dialogue from video into **Final Cut Pro–ready caption title clips**.
 
-> For video caption generation, macOS will request **Speech Recognition** permission.
+Captions are exported as an **FCPXML file** that imports directly into Final Cut Pro, placing each caption as a **title on the timeline** — fully editable, frame-accurate, and easy to customize.
 
 ---
 
 ## ✨ Features
 
-- 🎬 Convert **SRT subtitles** into Final Cut Pro title captions  
-- 🎙 Generate captions automatically from **video speech**  
-- 🎨 Choose from multiple **caption styles** (Gallery)  
-- ✍️ **Edit caption text** before exporting  
-- 🧩 Control **Max Words per Caption** (automatic splitting)  
-- ⏱ Frame-accurate timing with selectable frame rates  
-- 📄 Exports standard **FCPXML** for seamless Final Cut Pro import  
-- 🖱 Drag & drop support  
-- 🖥 Native macOS app (no plugins required)
+- Import **SRT subtitle files**
+- Generate captions from **video speech** (local macOS Speech Recognition)
+- Preview captions before export
+- Choose from multiple **caption styles**
+- **Frame-accurate timing** (no edit frame boundary warnings)
+- Export to **FCPXML** and **SRT**
+- Clean, native macOS UI
 
 ---
 
@@ -34,21 +30,23 @@ I built this because I was tired of seeing only paid or subscription-based optio
 1. Launch **CaptionForge**
 2. Choose a caption style from the **Gallery**
 3. Load your content:
-   - **SRT** → import subtitles  
-   - **Video** → generate captions from speech
-4. *(Optional)* Adjust **Max Words per Caption**
-5. Click **Export**
-6. Import the exported **FCPXML** into Final Cut Pro
+   - **SRT** → import an existing subtitle file  
+   - **Video** → generate captions from spoken dialogue
+4. (Optional) Adjust **Max Words**
+5. Choose the **Frame Rate** to match your Final Cut Pro timeline
+6. Select **Original** or **Processed**
+7. Click **Export**
+8. Import the exported `.fcpxml` file into Final Cut Pro
 
 ---
 
 ## 🖼 Caption Style Gallery
 
-When you open CaptionForge, you’ll see a **Gallery** with preview videos of available caption styles.
+When CaptionForge opens, you’ll see the **Gallery**, which displays preview videos of available caption styles.
 
-- Click a preview to select a style and continue  
-- Or click **Skip** to choose a style later  
-- If styles aren’t installed yet, click **Install Titles**
+- Click a preview to select a style and continue
+- Click **Skip** to choose a style later
+- If caption styles are not installed, click **Install Titles**
 
 You can return to the Gallery at any time using the **Gallery** button.
 
@@ -57,67 +55,171 @@ You can return to the Gallery at any time using the **Gallery** button.
 ## 📂 Loading Content
 
 ### Load an SRT file
+
 1. Select **SRT**
 2. Click **Load SRT**
-3. Choose your `.srt` file
+3. Choose a `.srt` file
+
+Captions are loaded and displayed in the **Original** view.
+
+---
 
 ### Generate captions from video
+
 1. Select **Video**
 2. Click **Load Video**
 3. Choose a `.mov`, `.mp4`, or `.m4v` file
-4. Allow **Speech Recognition** when prompted
+4. When prompted, allow **Speech Recognition**
 5. Wait for caption generation to complete
 
----
-
-## ✍️ Editing Captions
-
-Captions are created as **Final Cut Pro title clips**, so they are fully editable.
-
-- Edit text directly in **Final Cut Pro** (Inspector → Text)
-- Move, trim, or delete caption titles like any other clip
-- Edit caption text **inside CaptionForge** before exporting
+> Speech recognition runs locally on your Mac.  
+> No audio or video is uploaded.
 
 ---
 
-## 🧩 Cue Length (Max Words per Caption)
+## 🗂 Original vs Processed
 
-Sometimes captions are too long for a single title.
+CaptionForge shows captions in two views:
 
-CaptionForge includes a **Max Words per Caption** control:
+### Original
 
-- Lower values create **shorter, faster** captions
-- Higher values create **longer** captions with fewer cuts
-- Splitting is applied **on export**, so your original cues remain intact
+- Shows captions exactly as imported or generated
+- Matches the source SRT or speech recognition output
+- **Read-only** (cannot be edited)
+- Text can be selected and copied
+
+Use **Original** when you want to export captions exactly as they were provided.
+
+---
+
+### Processed
+
+- Shows captions after processing
+- Reflects **Max Words** splitting and reflow
+- Fully **editable**
+- Supports:
+  - text editing
+  - timing adjustments
+  - **Shift + Enter** to split captions
+  - merging captions
+
+Use **Processed** to refine caption pacing, readability, and structure.
+
+---
+
+## 📤 Export Behavior (Important)
+
+CaptionForge exports **the view that is currently selected**:
+
+- **Original selected** → exports Original captions
+- **Processed selected** → exports Processed captions
+
+> **What you see is what you export.**
+
+This applies to both **FCPXML** and **SRT** exports.
+
+---
+
+## ✏️ Editing Captions
+
+### Original
+
+- Read-only
+- No text or timing edits
+- Used for reference or direct export
+
+### Processed
+
+- Fully editable
+- Edit text directly in the preview
+- Adjust caption timing
+- Keyboard shortcuts:
+  - **Shift + Enter** → split caption
+  - Merge captions by removing breaks or using backspace at boundaries
+
+---
+
+## 🎛 Caption Controls
+
+### Max Words
+
+Controls the maximum number of words per caption in the **Processed** view.
+
+- Lower values → shorter captions, more cuts
+- Higher values → longer captions, fewer cuts
+
+Changing Max Words affects only the **Processed** view.  
+The **Original** view is never modified.
+
+---
+
+### Frame Rate
+
+Choose the frame rate to match your Final Cut Pro timeline:
+
+- 23.976
+- 24
+- 25
+- 29.97
+- 30
+- 60
+
+CaptionForge exports captions using **exact frame-accurate timing**, including proper NTSC fractional frame rates, so Final Cut Pro imports the XML **without frame-boundary warnings**.
 
 ---
 
 ## 📤 Exporting to Final Cut Pro
 
-1. Click **Export**
-2. Save the `.fcpxml` file
-3. In **Final Cut Pro**:
-   - Go to **File → Import → XML**
-   - Select the exported file
+1. Select **Original** or **Processed**
+2. Click **Export**
+3. Save the `.fcpxml` file
+4. In Final Cut Pro, choose **File → Import → XML**
+5. Select the exported file
 
-Your captions will appear as title clips in a new project or event.
+Captions appear as **title clips** in a new project or event.
 
-> To use them in an existing timeline, select all caption titles, **copy**, and **paste** them into your working timeline.
+### Using captions in an existing timeline
+
+If captions import into a new project:
+
+1. Select all caption titles
+2. Copy
+3. Paste into your working timeline
 
 ---
 
-## 🎛 Frame Rate
+## ☕ Support & Donations
 
-Choose the frame rate to match your Final Cut Pro timeline:
+CaptionForge includes a **Support** button (☕) in the app.
 
-- 23.976  
-- 24  
-- 25  
-- 29.97  
-- 30  
-- 60  
+- A small indicator highlights it until clicked
+- Clicking opens the support panel
+- Once clicked, the indicator disappears and stays gone across app launches
 
-This ensures **frame-accurate caption timing**.
+Supporting development is optional and always appreciated.
+
+---
+
+## ✅ What CaptionForge Guarantees
+
+- Frame-accurate caption timing
+- Clean FCPXML imports
+- Fully editable caption titles in Final Cut Pro
+- Local-only processing
+- macOS-native UI and behavior
+
+---
+
+## 🧠 Tips
+
+- Always match the **Frame Rate** to your Final Cut Pro project
+- Use **Original** to preserve existing subtitle structure
+- Use **Processed** to improve readability and pacing
+- Caption styles can be changed or customized inside Final Cut Pro after import
+
+---
+
+If you like the app, feel free to **Buy Me a Coffee** ☕
 
 ---
 
