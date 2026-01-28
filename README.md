@@ -219,14 +219,11 @@ Supporting development is optional and always appreciated.
 
 ---
 
-If you like the app, feel free to **Buy Me a Coffee** ☕
-
----
-
 ## ☕ Support
 
-If you like the app, feel free to **Buy Me a Coffee** ❤️
+If you like the app, feel free to **Buy Me a Coffee** ☕ ❤️
 
 <p align="center">
-  <img width="300" height="300" alt="qr-code" src="https://github.com/user-attachments/assets/5c602520-fbbe-4d36-b207-8f4f0d64ab50" />
+  <img width="300" height="300" alt="qr-code" src="https://github.com/user-attachments/assets/420fc075-ec21-4e0e-afbb-cc57f75c5f74" />
 </p>
+
